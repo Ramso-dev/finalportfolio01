@@ -15,7 +15,17 @@
 
 .container-fluid {
     padding: 60px 50px;
+
     
+}
+
+.withimage{
+    background: url('background.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height:100%;
 }
 
 .bg-grey {
@@ -61,6 +71,8 @@ footer .glyphicon {
     padding: 20px 20px;
     
 }
+
+
 </style>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -72,7 +84,7 @@ footer .glyphicon {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <img src="book.png" style="width: 40px; height: 40px;"/>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -84,26 +96,33 @@ footer .glyphicon {
   </div>
 </nav>
 
+
+
   <div class="mainbanner text-center">
     <h1>My Portfolio</h1>
-    <p>Web Development boosted with some Vodka!:D</p>
+    <p>A brief presentation of my latest learnings</p>
   </div>
 
-  <div class="container-fluid">
+
+<!-- Projects list -->
+  <div id="myPortfolio" class="container-fluid">
+      
   <tasks></tasks>
+  
 </div>
 
 <!-- Container (Contact) -->
 <div id="myContact" class="container-fluid bg-grey">
   <h2>Contact</h2>
   <h4>Feel free to contact me!:</h4>
-   <a  class="btn btn-primary btn-sm">
+   <a  class="btn btn-primary btn-sm mailto" href="mailto:javier.perez.losada@gmail.com">
         <span class="glyphicon glyphicon-envelope"></span> E-Mail
     </a>
 </div>
 
 <!-- Footer -->
 <footer class="footer text-center bg-white">
+    
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>

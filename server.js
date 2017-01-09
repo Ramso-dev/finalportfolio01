@@ -18,6 +18,8 @@ app.engine('html', require('ejs').renderFile);
 //Set static folder for angular stuff
 app.use(express.static(path.join(__dirname,'client')));
 
+
+
 // Body Parser Middelware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
