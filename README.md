@@ -6,4 +6,4 @@ Includes a brief description of the projects and links to the github repository 
 
 -Projects are pulled from a collection in a MongoLab database.<br />
 -Backend developed with Node and Express.<br />
--Frontend developed with Typescript, Angular 2 and some Bootstrap.<br />
+-Frontend developed with Typescript, Angular 2 and some CSS3+Bootstrap3.<br />
