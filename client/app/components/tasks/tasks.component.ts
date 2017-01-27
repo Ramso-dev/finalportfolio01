@@ -9,13 +9,29 @@ moduleId: module.id,
 })
 
 export class TasksComponent { 
+
     projects: Project[];
+    category:String;
+
+
+
     constructor(private ProjectService:ProjectService){
         this.ProjectService.getProjects()
         .subscribe(projects =>{
             this.projects=projects;
             //console.log(projects);
+            this.category="mean";
+            
         });
+
+        
     }
+
+
+
+   public  getCategory(category:String){
+      // console.log("getCategory");console.log(category);
+       this.category=category;
+   }
 
 }

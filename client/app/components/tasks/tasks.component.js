@@ -18,8 +18,13 @@ var TasksComponent = (function () {
             .subscribe(function (projects) {
             _this.projects = projects;
             //console.log(projects);
+            _this.category = "mean";
         });
     }
+    TasksComponent.prototype.getCategory = function (category) {
+        // console.log("getCategory");console.log(category);
+        this.category = category;
+    };
     return TasksComponent;
 }());
 TasksComponent = __decorate([

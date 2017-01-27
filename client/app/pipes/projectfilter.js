@@ -9,23 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var http_1 = require("@angular/http");
-var app_component_1 = require("./app.component");
-var tasks_component_1 = require("./components/tasks/tasks.component");
-var projectfilter_1 = require("./pipes/projectfilter");
-var AppModule = (function () {
-    function AppModule() {
+var ProjectFilter = (function () {
+    function ProjectFilter() {
     }
-    return AppModule;
+    ProjectFilter.prototype.transform = function (projects, arg1) {
+        if (projects != undefined) {
+            //arg1 -> category of project
+            return projects.filter(function (project) { return project.category == arg1; });
+        }
+    };
+    return ProjectFilter;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, tasks_component_1.TasksComponent, projectfilter_1.ProjectFilter],
-        bootstrap: [app_component_1.AppComponent]
+ProjectFilter = __decorate([
+    core_1.Pipe({
+        name: 'projectfilter',
     }),
     __metadata("design:paramtypes", [])
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], ProjectFilter);
+exports.ProjectFilter = ProjectFilter;
+//<div *ngFor="let item of items| myfilter: actualPage:maxItems let idx=index"> 
+//# sourceMappingURL=projectfilter.js.map
