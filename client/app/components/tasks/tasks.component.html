@@ -2,15 +2,18 @@
 .nav-tabs{font:bold;}
 </style>
 
+<!--Category banner -->
+<div style="text-align: center">
+    <img style="width: 200px; height: 120px; margin:15px; border-radius: 50px;" [src]="category+'.jpg'">
+</div>
 
+<!--Category tabs -->
 <ul class="nav nav-tabs">
 			<li class="active">
         <a  href="#1a" data-toggle="tab" (click)="getCategory('mean')">MEAN2</a>
 			</li>
 			<li><a href="#2a" data-toggle="tab" (click)="getCategory('java')">Java</a>
 			</li>
-			<!--<li><a href="#3a" data-toggle="tab">Solution</a>
-			</li>-->
 		</ul>
 
 
@@ -23,11 +26,9 @@
 				</div>
                 </div>
 
+
+<!--Project list -->
 <div class="project-list">
-   <!-- <img src="java.jpg" style="width: 100px; height: 80px;"/>-->
-   <div style="text-align: center">
-    <img style="width: 200px; height: 120px; margin:20px; border-radius: 50px;" [src]="category+'.jpg'">
-   </div>
 
     <div *ngFor="let project of projects | projectfilter: category">
         <div class="col-md-12">

@@ -19,4 +19,3 @@ export class ProjectFilter implements PipeTransform {
 }
 
 
-//<div *ngFor="let item of items| myfilter: actualPage:maxItems let idx=index">
