@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core'; //to Inject service as dependency
-import {Http, Headers} from '@angular/http'; //to use http
-import 'rxjs/add/operator/map';  //to listen requests and send data as observable
+import {Injectable} from '@angular/core'; 
+import {Http, Headers} from '@angular/http'; 
+import 'rxjs/add/operator/map';  
 
 @Injectable()
 export class ProjectService{
@@ -9,9 +9,8 @@ export class ProjectService{
     }
 
     getProjects(){
-       // return this.http.get('http://localhost:3000/api/projects')
        return this.http.get('/api/projects')
-        .map(res => res.json()); //return as observable
+        .map(res => res.json()); 
     }
 
 }

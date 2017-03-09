@@ -20,7 +20,7 @@ export class TasksComponent {
         .subscribe(projects =>{
             this.projects=projects;
             //console.log(projects);
-            this.category="mean";
+            this.category="java";
             
         });
 

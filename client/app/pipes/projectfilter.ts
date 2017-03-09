@@ -10,8 +10,11 @@ export class ProjectFilter implements PipeTransform {
         if(projects!=undefined){
 
          //arg1 -> category of project
-
-         return projects.filter((project) => project.category==arg1);
+         //arg2 -> index of project
+         
+    
+         //filter projects by chosen category(arg1) and then order them in descending index order 
+         return projects.filter((project) => project.category==arg1).sort((project1, project2) => Number(project2.index) - Number(project1.index));
         
         }
     }

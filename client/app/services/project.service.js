@@ -8,18 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core"); //to Inject service as dependency
-var http_1 = require("@angular/http"); //to use http
-require("rxjs/add/operator/map"); //to listen requests and send data as observable
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
 var ProjectService = (function () {
     function ProjectService(http) {
         this.http = http;
         console.log('Projects service initialized...');
     }
     ProjectService.prototype.getProjects = function () {
-        // return this.http.get('http://localhost:3000/api/projects')
         return this.http.get('/api/projects')
-            .map(function (res) { return res.json(); }); //return as observable
+            .map(function (res) { return res.json(); });
     };
     return ProjectService;
 }());

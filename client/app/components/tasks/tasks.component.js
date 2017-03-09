@@ -18,7 +18,7 @@ var TasksComponent = (function () {
             .subscribe(function (projects) {
             _this.projects = projects;
             //console.log(projects);
-            _this.category = "mean";
+            _this.category = "java";
         });
     }
     TasksComponent.prototype.getCategory = function (category) {
